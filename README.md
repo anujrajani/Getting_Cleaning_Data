@@ -21,16 +21,16 @@ You should create one R script called run_analysis.R that does the following:-
 
 ### Code Book
 
-From Overview: A code book that describes the variables, the data, and any transformations or work that you performed to clean up the data called CodeBook.md.
+A code book that describes the variables, the data, and any transformations or work that you performed to clean up the data called CodeBook.md.
 
 ### README
 
-From Overview: You should also include a README.md in the repo with your scripts. This repo explains how all of the scripts work and how they are connected.
+You should also include a README.md in the repo with your scripts. This repo explains how all of the scripts work and how they are connected.
 
 
 ## Data Analysis Explanation
 
-###For 1st tidy data set:
+### For 1st tidy data set:
 
 * Read data sets and merge them
 * Read subjects and merge them
@@ -51,4 +51,4 @@ From Overview: You should also include a README.md in the repo with your scripts
 * For each activity in a subject, get the full list of measurements
 * Calculate the mean for each of these activities
 * Place the mean in subsequent columns of the subject/activity row
-* Write second tiny data set to a text file
+* Write second tidy data set to a text file
