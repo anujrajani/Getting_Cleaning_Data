@@ -1,20 +1,20 @@
 ## Read data sets and merge
-trainData <- read.table("train/X_train.txt")
-testData <- read.table("test/X_test.txt")
+trainData <- read.table("UCI HAR Dataset/train/X_train.txt")
+testData <- read.table("UCI HAR Dataset/test/X_test.txt")
 data<-rbind(trainData, testData)
 
 ## Read subjects and merge
-trainSubjects <- read.table("train/subject_train.txt")
-testSubjects <- read.table("test/subject_test.txt")
+trainSubjects <- read.table("UCI HAR Dataset/train/subject_train.txt")
+testSubjects <- read.table("UCI HAR Dataset/test/subject_test.txt")
 subjects <- rbind(trainSubjects, testSubjects)
 
 ## Read data labels and merge
-trainLabels <- read.table("train/y_train.txt")
-testLabels <- read.table("test/y_test.txt")
+trainLabels <- read.table("UCI HAR Dataset/train/y_train.txt")
+testLabels <- read.table("UCI HAR Dataset/test/y_test.txt")
 labels <- rbind(trainLabels, testLabels)
 
 ## Read Features List (to be used as attribute names for data)
-featuresList <- read.table("features.txt", stringsAsFactors=FALSE)
+featuresList <- read.table("UCI HAR Dataset/features.txt", stringsAsFactors=FALSE)
 
 ## Use only names from features list
 features <- featuresList$V2
@@ -28,7 +28,7 @@ names(data) <- features[keepColumns]
 names(data) <- gsub("\\(|\\)", "", names(data))
 
 ## Read ActivityList (to add descriptive names to data set)
-activities <- read.table("activity_labels.txt")
+activities <- read.table("UCI HAR Dataset/activity_labels.txt")
 labels[,1] = activities[labels[,1], 2]
 ## Add activity label
 names(labels) <- "activity"
